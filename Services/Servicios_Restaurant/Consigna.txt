@@ -1,0 +1,11 @@
+Consigna
+Ejercicio: Restaurante e ingredientes
+Un restaurante posee una serie de platos en su menú. Cada uno de ellos tiene un número de plato, nombre, precio y breve descripción.
+
+Al mismo tiempo, cada plato tiene una lista de ingredientes que lo conforman, como ser por ejemplo carne de vaca, zanahoria, tomate, huevo, queso, etc.
+
+Esta lista de ingredientes se encuentra almacenada en un servicio llamado «ingredientes«, el cual modela los ingredientes teniendo en cuenta los siguientes datos: id_ingrediente, nombre_ingrediente, lista_platos, donde lista platos posee los nombres de todos los platos que utilizan dicho ingrediente.
+
+Para facilitar la conformación del menú y ayudar al chef en la compra de los respectivos ingredientes, se necesita de un servicio platos que, al dar de alta un nuevo plato, busque los ingredientes que lo conforman en el servicio ingredientes y los asigne a su lista.
+
+Tener en cuenta que el plato en cuestión debe existir en el servicio ingredientes para poder hacer la correspondiente asignación. En caso de que entre los ingredientes no se encuentre el plato en cuestión, el mismo deberá dejar su lista de ingredientes en null.
