@@ -7,6 +7,7 @@ package com.todocodeacademy.turnos.Service;
 import com.todocodeacademy.turnos.Model.Paciente;
 import com.todocodeacademy.turnos.Model.Turno;
 import com.todocodeacademy.turnos.Repository.ITurnoRepository;
+import com.todocodeacademy.turnos.Repository.PacienteAPICliente;
 import java.time.LocalDate;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class TurnoService implements ITurnoService{
     private ITurnoRepository turnoRepo;
         @Autowired 
     private RestTemplate apiConsumir;
+        @Autowired
+        private PacienteAPICliente PAC;
 
     @Override
     public List<Turno> getTurnos() {
@@ -33,7 +36,7 @@ public class TurnoService implements ITurnoService{
     @Override
     public void saveTurno(LocalDate fecha, String tratamiento, String dniPaciente) {
         //buscar el paciente en la api paciente
-        Paciente pac= apiConsumir.getForObject("http://localhost:9001/pacientes/traerDni/"+dniPaciente, Paciente.class);
+        Paciente pac=PAC.traerPacienteXdni(dniPaciente);
         String nombreCompletoPaciente=pac.getNombre()+" "+pac.getApellido();
         Turno turno=new Turno();
         turno.setFecha(fecha);
