@@ -1,0 +1,8 @@
+Ejercicio Nº 1: Gestión de Libros y Autores
+En una biblioteca virtual, se desea implementar un sistema para gestionar libros y autores. Cada libro tiene un número de ISBN, título, año de publicación y una breve descripción. Asimismo, a cada libro se le asocia una lista de autores que contribuyeron al mismo, indicando sus nombres y nacionalidades.
+
+Por otro lado, existe un servicio llamado «autores» que almacena la información detallada de cada uno de los autores de cada libro.
+
+Cada autor tiene un ID único, nombre completo, fecha de nacimiento y una lista de ids de libros que ha escrito.
+
+A partir de esto: Utilizar Feign para que el servicio de libros pueda obtener la información de los autores desde el servicio de autores al momento de registrar un nuevo libro.
