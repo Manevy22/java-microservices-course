@@ -1,0 +1,2 @@
+In this project, I applied the concept of client-side load balancing using Spring Cloud Load Balancer.
+
