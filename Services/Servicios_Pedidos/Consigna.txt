@@ -1,8 +1,13 @@
 Ejercicio Nº 2: Administración de envios y destinatarios
 Una empresa de Delivery desea desarrollar un sistema para administrar sus envios y los destinatarios de los mismos.
 
-Cada envío tiene una id única, fecha de creación, estado de procesamiento y breve descripción de lo que lleva. Al mismo tiempo, cada envío también tiene asociada la id de cliente del destinatario (persona que lo va a recibir). Para esto se necesita desarrollar un microservicio de envíos.
+Cada envío tiene una id única, fecha de creación, estado de procesamiento y breve descripción de lo que lleva.
+Al mismo tiempo, cada envío también tiene asociada la id de cliente del destinatario (persona que lo va a recibir).
+Para esto se necesita desarrollar un microservicio de envíos.
 
-Por otro lado, se debe llevar a cabo un microservicio destinatarios donde por cada uno se debe guardar: id, dni, nombre, apellido, direccion y num de telefono. Al mismo tiempo, este servicio será consultado por los destinatarios para conocer cuáles son los pedidos que tiene o tuvo a su nombre. Para obtener los datos de cada pedido deberá consultar al servicio envíos mediante su id de destinatario.
+Por otro lado, se debe llevar a cabo un microservicio destinatarios donde por cada uno se debe guardar: id, dni, nombre,
+apellido, direccion y num de telefono. Al mismo tiempo, este servicio será consultado por los destinatarios para conocer
+cuáles son los pedidos que tiene o tuvo a su nombre.
+Para obtener los datos de cada pedido deberá consultar al servicio envíos mediante su id de destinatario.
 
 Implementar una integración entre el servicio de destinatarios y el servicio de envios utilizando Feign.
